@@ -90,3 +90,40 @@ for (let i = 0; i<=15; i++){
         console.log(`${i} нечетное`);
     }
 }
+console.log('Задание 8');
+let exit1 = "";
+for (let i = 1; i < 11; i++) {
+exit1 = "";
+for (let j = 0; j < i; j++) {
+    if (i % 2 != 0){
+        exit1 +='*';
+    }
+    else {
+        exit1 +='#';
+    }
+ }
+ console.log(exit1);
+}
+console.log('Задание 9');
+let arr = [0, -3, 1];
+console.log(arr);
+for (let i = 0, endI = arr.length - 1; i < endI; i++) {
+    for (let j = 0, endJ = endI - i; j < endJ; j++) {
+        if (arr[j] > arr[j + 1]) {
+            let oga = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = oga;
+        }
+    }
+}
+console.log(arr);
+console.log('Задание 10');
+let arr1 = [2, -1, 0, -5, -4];
+let max = arr1[0];
+console.log(arr1);
+for (let i = 1, endI = arr1.length - 1; i < endI; i++){
+    if (arr[i-1] > arr[i]){
+        max = arr1[i-1];
+    }
+}
+console.log(max);
