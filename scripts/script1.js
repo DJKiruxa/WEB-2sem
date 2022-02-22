@@ -1,43 +1,43 @@
 console.log('Задание 1');
 console.log(typeof(9));
-// Предположение:
-// Фактический:
+// Предположение:number
+// Фактический: number
 console.log(typeof(1.2));
-// Предположение:
-// Фактический:
+// Предположение:number
+// Фактический:number
 console.log(typeof(NaN));
-// Предположение:
-// Фактический:
+// Предположение: number
+// Фактический: number
 console.log(typeof("Hello World"));
-// Предположение:
-// Фактический:
+// Предположение: string
+// Фактический: string
 console.log(typeof(true));
-// Предположение:
-// Фактический:
+// Предположение: bool
+// Фактический: bool
 console.log(typeof(2 != 1));
-// Предположение:
-// Фактический:
+// Предположение: bool
+// Фактический: bool
 console.log(typeof("сыр" + "ы"));
-// Предположение:
-// Фактический:
+// Предположение: string
+// Фактический: string
 console.log(typeof("сыр" - "ы"));
-// Предположение:
-// Фактический:
+// Предположение: string
+// Фактический: number
 console.log(typeof("2" + "4"));
-// Предположение:
-// Фактический:
+// Предположение: string
+// Фактический: string
 console.log(typeof("2" - "4"));
-// Предположение:
-// Фактический:
+// Предположение: number
+// Фактический: number
 console.log(typeof("Сэм" + 5));
-// Предположение:
-// Фактический:
+// Предположение: string
+// Фактический: string
 console.log(typeof("Сэм" - 5));
-// Предположение:
-// Фактический:
+// Предположение: number
+// Фактический: number
 console.log(typeof(99 * "шары"));
-// Предположение:
-// Фактический:
+// Предположение: number
+// Фактический: number
 console.log('Задание 2');
 let length = 2;
 let width = 3;
@@ -65,3 +65,13 @@ else {
     console.log(`${year} - не високосный`)
     alert(fasle);
 }
+console.log('Задание 5');
+let one = 2;
+let two = 5;
+if (one+two == 10 || one == 10 || two == 10 ){
+    alert(true);
+}
+else{
+    alert(false);
+}
+console.log('Задание 6');
