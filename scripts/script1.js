@@ -75,3 +75,18 @@ else{
     alert(false);
 }
 console.log('Задание 6');
+let amount = Number(prompt('Введите число'));
+let exit = "1 овечка... ";
+for (let i = 2; i <= amount; i++){
+   exit += `${i} овечка... `
+}
+console.log(exit)
+console.log('Задание 7');
+for (let i = 0; i<=15; i++){
+    if (i%2 == 0){
+        console.log(`${i} четное`);
+    }
+    else{
+        console.log(`${i} нечетное`);
+    }
+}
