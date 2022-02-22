@@ -38,6 +38,8 @@ console.log(typeof("Сэм" - 5));
 console.log(typeof(99 * "шары"));
 // Предположение: number
 // Фактический: number
+
+
 console.log('Задание 2');
 let length = 2;
 let width = 3;
@@ -45,11 +47,16 @@ console.log('Стороны ', length,' и ', width);
 console.log(length*2 + width*2);
 console.log(length*width);
 console.log((length*2 + width*2)/(length*width));
+
+
 console.log('Задание 3');
 let celcia = 25;
 let farengheit = 66;
 console.log(`${celcia}\xB0 C соответсвует ${celcia *9/5+32}\xB0 F`);
 console.log(`${farengheit}\xB0 C соответсвует ${(farengheit -32)* 5/9 }\xB0 F`);
+
+
+
 console.log('Задание 4');
 let year= Number(prompt('Введите год'));
 console.log(typeof(year));
@@ -65,6 +72,9 @@ else {
     console.log(`${year} - не високосный`)
     alert(fasle);
 }
+
+
+
 console.log('Задание 5');
 let one = 2;
 let two = 5;
@@ -74,6 +84,9 @@ if (one+two == 10 || one == 10 || two == 10 ){
 else{
     alert(false);
 }
+
+
+
 console.log('Задание 6');
 let amount = Number(prompt('Введите число'));
 let exit = "1 овечка... ";
@@ -81,6 +94,9 @@ for (let i = 2; i <= amount; i++){
    exit += `${i} овечка... `
 }
 console.log(exit)
+
+
+
 console.log('Задание 7');
 for (let i = 0; i<=15; i++){
     if (i%2 == 0){
@@ -90,6 +106,9 @@ for (let i = 0; i<=15; i++){
         console.log(`${i} нечетное`);
     }
 }
+
+
+
 console.log('Задание 8');
 let exit1 = "";
 for (let i = 1; i < 11; i++) {
@@ -104,6 +123,9 @@ for (let j = 0; j < i; j++) {
  }
  console.log(exit1);
 }
+
+
+
 console.log('Задание 9');
 let arr = [0, -3, 1];
 console.log(arr);
@@ -117,6 +139,9 @@ for (let i = 0, endI = arr.length - 1; i < endI; i++) {
     }
 }
 console.log(arr);
+
+
+
 console.log('Задание 10');
 let arr1 = [2, -1, 0, -5, -4];
 let max = arr1[0];
