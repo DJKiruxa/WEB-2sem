@@ -143,12 +143,12 @@ console.log(arr);
 
 
 console.log('Задание 10');
-let arr1 = [2, -1, 0, -5, -4];
+let arr1 = [-5, 2, 0, -1, -4];
 let max = arr1[0];
 console.log(arr1);
-for (let i = 1, endI = arr1.length - 1; i < endI; i++){
-    if (arr[i-1] > arr[i]){
-        max = arr1[i-1];
+for (let i = 1, endI = arr1.length; i <= endI; i++){
+    if (arr1[i-1] < arr1[i]){
+        max = arr1[i];
     }
 }
 console.log(max);
