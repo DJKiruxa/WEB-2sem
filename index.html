@@ -3,6 +3,28 @@
 
 <head>
 	<title>WEBMaket</title>
+	<script>
+		
+
+		function changeMemes(changeId) {
+		    
+			memesId[currentMemes].style.display = 'none';
+			if(changeId == -1 && currentMemes == 0){
+				currentMemes = 2;
+				memesId[currentMemes].style.display = 'block';
+			}
+			else if (changeId == true && currentMemes == 2){
+				currentMemes = 0;
+				memesId[currentMemes].style.display = 'block';
+			}
+			else{
+			memesId[currentMemes+changeId].style.display = 'block';
+			currentMemes+=changeId;
+			}
+			//console.log("Tut");
+		}
+
+	</script>
 	<meta charset="utf-8">
 </head>
 
@@ -11,10 +33,30 @@
 		
 	</header>
 	<main>
-		<h1>Архипов Кирилл Lab1</h1>
+		
+		<h1>Архипов Кирилл Lab1-2</h1>
 		<!-- основной текст-->
-		<script src = "scripts/script1.js">	
+		<!-- <script src = "scripts/script1.js">	</script>-->
+		<script src = "scripts/script2.js">	</script>
+		<div>
+			<img class = "memes" style = "height:500px"id = "memesId1" src = "img/memes1.jpg">
+			<img class = "memes" style = "height:500px"id = "memesId2" src = "img/memes2.jpg">
+			<img class = "memes" style = "height:500px" id = "memesId3" src = "img/memes3.jpeg">
+		</div>
+
+		<script>
+			let memesId = document.querySelectorAll( ".memes" );
+			memesId[1].style.display = 'none';
+			memesId[2].style.display = 'none';
+			let currentMemes = 0
+
 		</script>
+		
+		<div></div>
+		<button onclick = "changeMemes(-1)">Предыдыущий мемес</button> 
+		<button onclick = "changeMemes(+1)">Следующий мемес</button> 
+		</div>
+
 	</main>
 	<footer>
 	
