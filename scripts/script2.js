@@ -1,6 +1,6 @@
 console.log("Задание №1 \n");
 
-function Module(f)
+function absValue(f)
 {
     if (f<0)
     {
@@ -13,7 +13,7 @@ let arr1 = [0, 1, -1, -2];
 let arr2 = [];
 
 for (let i = 0, endI = arr1.length; i < endI; i++){
-    arr2[i]=Module(arr1[i]);
+    arr2[i]=absValue(arr1[i]);
     console.log (`Модуль числа ${arr1[i]} = ${arr2[i]}`);
 }
 
@@ -36,11 +36,11 @@ function isPalindrome(str)
     }
     if (equally==long)
     {
-        console.log("Слово '" + str + "' является полиномом? - " + true)
+        console.log(`Слово "${str}" + является полиномом - true`)
     }
     else 
     {
-        console.log("Слово '" + str + "' является полиномом? - " + false)
+        console.log(`Слово "${str}" является полиномом? - false`)
     }
 
 }
@@ -48,7 +48,7 @@ function isPalindrome(str)
 let h='довод', k='кружка';
 isPalindrome(h);
 isPalindrome(k);
-isPalindrome(g);
+
 
 
 console.log("Задание №3 \n");
@@ -79,7 +79,7 @@ function matrixAddition(arr1, arr2)
            sumArr += "\n";
        }
 
-        console.log("Cумма двух массивов = " + "\n" + sumArr )
+        console.log(`Cумма двух массивов =\n ${sumArr}` )
     }
     else
     {
@@ -107,10 +107,10 @@ console.log ("Список свойств: " + Object.keys(student));
 console.log(`Cтудент ${student.last_name} ${student.first_name} учится в ${student.group} группе`);
 
 let student1 = {
-    group: 201-324,
+    group: 324,
     last_name: "Горячий",
     first_name: "Перец"
 };
 
-console.log ("Список свойств: " + Object.keys(student1));
+console.log (`Список свойств: ${Object.keys(student1)}`);
 console.log(`Cтудент ${student1.last_name} ${student1.first_name} учится в группе ${student1.group}`);
