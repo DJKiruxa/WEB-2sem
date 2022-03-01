@@ -13,7 +13,7 @@
 				currentMemes = 2;
 				memesId[currentMemes].style.display = 'block';
 			}
-			else if (changeId == true && currentMemes == 2){
+			else if (changeId == true && currentMemes == (memesId.length-1)){
 				currentMemes = 0;
 				memesId[currentMemes].style.display = 'block';
 			}
@@ -39,15 +39,21 @@
 		<!-- <script src = "scripts/script1.js">	</script>-->
 		<script src = "scripts/script2.js">	</script>
 		<div>
-			<img class = "memes" style = "height:500px"id = "memesId1" src = "img/memes1.jpg">
-			<img class = "memes" style = "height:500px"id = "memesId2" src = "img/memes2.jpg">
+			
+			<img class = "memes" style = "height:500px" id = "memesId1" src = "img/memes1.jpg">
+			<img class = "memes" style = "height:500px" id = "memesId2" src = "img/memes2.jpg">
 			<img class = "memes" style = "height:500px" id = "memesId3" src = "img/memes3.jpeg">
+			<img class = "memes" style = "height:500px" id = "memesId4" src = "img/memes4.jpg">
+			<img class = "memes" style = "height:500px" id = "memesId4" src = "img/memes5.jpg">
+			<!--<img class = "memes" style = "height:500px" id = "memesId4" src = "img/memes6.jpg">-->
+			
 		</div>
 
 		<script>
 			let memesId = document.querySelectorAll( ".memes" );
-			memesId[1].style.display = 'none';
-			memesId[2].style.display = 'none';
+			for (let i =1; i < memesId.length; i++){
+				memesId[i].style.display = 'none';
+			}
 			let currentMemes = 0
 
 		</script>
