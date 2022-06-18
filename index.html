@@ -3,9 +3,13 @@
 
 <head>
 	<title>WEBMaket</title>
+	<style>
+	
+
+	</style>
 	<script>
 		
-
+	
 		function changeMemes(changeId) {
 		    
 			memesId[currentMemes].style.display = 'none';
@@ -24,7 +28,16 @@
 			//console.log("Tut");
 		}
 
+		
+
+		function open_form() {
+			ModalObj.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+		}
+
 	</script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="utf-8">
 </head>
 
@@ -37,6 +50,27 @@
 		<h1>Архипов Кирилл Lab1-2</h1>
 		<!-- основной текст-->
 		<!-- <script src = "scripts/script1.js">	</script>-->
+		<div id = "modal_form" class = "modal_form" >
+			<div class = "modal_background">
+				<form id="Form">
+					<p>Имя</p>
+					<input type="text" id="name" required minlength="3" maxlength="50" />
+					<p>Телефон</p>
+					<input type="text" id="number" required minlength="11" maxlength="11" />
+					<p>Дополнительные ингридиенты для пиццы:а</p>
+					<input type="checkbox" name="ticket1" id="ticket1" value = "ананас" required />
+					<label for="ticket1">ананас</label>
+					<input type="checkbox" name="ticket2" id="ticket2" value = "пепперони" required />
+					<label for="ticket2">пепперони</label>
+					<input type="checkbox" name="ticket3" id="ticket3" value = "курица" required />
+					<label for="ticket3">курица,</label>
+					<input type="checkbox" name="ticket4" id="ticket4" value = "грибы" required />
+					<label for="ticket4">грибы</label>
+					<p><button id="modalButClose">Закрыть</button></p>
+					<p><input id="modButSend" type="submit" /></p>
+				</form>
+			</div>
+		</div>
 		<script src = "scripts/script2.js">	</script>
 		<div>
 			
@@ -49,6 +83,12 @@
 			
 		</div>
 
+		<div>
+			<button onclick = "changeMemes(-1)">Предыдыущий мемес</button> 
+			<button onclick = "changeMemes(+1)">Следующий мемес</button>
+			<button id = "open_form">Открыть форму</button>  
+			</div>
+
 		<script>
 			let memesId = document.querySelectorAll( ".memes" );
 			for (let i =1; i < memesId.length; i++){
@@ -56,12 +96,46 @@
 			}
 			let currentMemes = 0
 
+		
+		let ModalObj = document.getElementById("modal_form");
+        let ModalFClose = function (e) {
+            document.body.style.overflow = 'visible';
+            ModalObj.style.display = "none";
+            return false;
+        }
+        ModalObj.onclick = function (e) {
+            if (e && e.target == ModalObj) {
+                document.body.style.overflow = 'visible';
+                ModalObj.style.display = "none";
+                return false;
+            }
+        };
+
+		document.getElementById("modalButClose").onclick = ModalFClose;
+		document.getElementById("open_form").onclick = function () {
+            ModalObj.style.display = "block";
+            document.body.style.overflow = 'hidden';
+		};
+		document.getElementById("modButSend").onclick = function (e) {
+			if (document.getElementById("name").validity.valid
+				&& document.getElementById("number").validity.valid
+				&& document.getElementById("ticket").validity.valid){
+					let objs = {
+						Name: document.getElementById("name").value,
+						Number: document.getElementById("number").value,
+						//Ananas: document.getElementById("ticket1").checked,
+						
+					};
+				console.table(objs);
+				return false;
+				
+			}
+			
+        };
+        
 		</script>
 		
-		<div>
-		<button onclick = "changeMemes(-1)">Предыдыущий мемес</button> 
-		<button onclick = "changeMemes(+1)">Следующий мемес</button> 
-		</div>
+		
 		
 	</main>
 	<footer>
